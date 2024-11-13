@@ -5,6 +5,7 @@ import PrimaryButton from '@/Components/PrimaryButton';
 import TextInput from '@/Components/TextInput';
 import GuestLayout from '@/Layouts/GuestLayout';
 import { Head, Link, useForm } from '@inertiajs/react';
+import { Github } from 'lucide-react';
 
 export default function Login({ status, canResetPassword }) {
     const { data, setData, post, processing, errors, reset } = useForm({
@@ -23,7 +24,7 @@ export default function Login({ status, canResetPassword }) {
 
     return (
         <GuestLayout>
-            <Head title="Log in" />
+            <Head title="Inicio de sesión" />
 
             {status && (
                 <div className="mb-4 text-sm font-medium text-green-600">
@@ -31,7 +32,13 @@ export default function Login({ status, canResetPassword }) {
                 </div>
             )}
 
+            <div className='flex flex-col gap-1 mb-5'>
+                <h2 className='text-gray-900 dark:text-white text-2xl'>Bienvenido</h2>
+                <p className='text-sm text-gray-900 dark:text-white/70'>Tenemos un proyecto el cual el desarrollador no pudo llevar a cabo, porque se fue de vacaciones!!!</p>
+            </div>
+
             <form onSubmit={submit}>
+
                 <div>
                     <InputLabel htmlFor="email" value="Email" />
 
@@ -65,33 +72,12 @@ export default function Login({ status, canResetPassword }) {
                     <InputError message={errors.password} className="mt-2" />
                 </div>
 
-                <div className="mt-4 block">
-                    <label className="flex items-center">
-                        <Checkbox
-                            name="remember"
-                            checked={data.remember}
-                            onChange={(e) =>
-                                setData('remember', e.target.checked)
-                            }
-                        />
-                        <span className="ms-2 text-sm text-gray-600 dark:text-gray-400">
-                            Remember me
-                        </span>
-                    </label>
-                </div>
-
-                <div className="mt-4 flex items-center justify-end">
-                    {canResetPassword && (
-                        <Link
-                            href={route('password.request')}
-                            className="rounded-md text-sm text-gray-600 underline hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 dark:text-gray-400 dark:hover:text-gray-100 dark:focus:ring-offset-gray-800"
-                        >
-                            Forgot your password?
-                        </Link>
-                    )}
-
+                <div className="mt-4 flex items-center justify-between">
+                    <Link href='https://github.com/codewithsebas/user-management' target='_blank' className='text-gray-900 dark:text-white'>
+                        <Github />
+                    </Link>
                     <PrimaryButton className="ms-4" disabled={processing}>
-                        Log in
+                        Iniciar sesión
                     </PrimaryButton>
                 </div>
             </form>
