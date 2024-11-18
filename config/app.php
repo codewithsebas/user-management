@@ -52,7 +52,7 @@ return [
     |
     */
 
-    'url' => env('APP_URL', 'http://localhost'),
+    'url' => env('APP_URL', 'https://sea-lion-app-68ixi.ondigitalocean.app'),
 
     /*
     |--------------------------------------------------------------------------
