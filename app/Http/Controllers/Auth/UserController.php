@@ -65,14 +65,18 @@ class UserController extends Controller
         // Validaciones para la actualización del usuario
         $request->validate([
             'name' => 'required|string|max:255',
+            'lastname' => 'required|string|max:255',
             'email' => 'required|email|unique:users,email,' . $user->id,
+            'phone' => 'required|string|max:10',
             'password' => 'nullable|string|min:8',
         ]);
 
         // Actualización del usuario en la base de datos
         $user->update([
             'name' => $request->name,
+            'lastname' => $request->lastname,
             'email' => strtolower($request->email),
+            'phone' => $request->phone,
             'password' => $request->password ? bcrypt($request->password) : $user->password,
         ]);
 
