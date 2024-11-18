@@ -4,6 +4,26 @@ This application allows the efficient management of user records.
 
 Users can view, create, edit and delete records quickly and easily, facilitating administration.
 
+# Application Deployment
+
+Several modifications were made to the application and it was properly deployed to DigitalOcean to ensure stable and scalable operation.
+
+<a href="https://sea-lion-app-68ixi.ondigitalocean.app/login" target="_blank">Deployment link</a>
+
+The login credentials are as follows:
+
+email:
+
+```
+correo@ejemplo.com
+```
+
+password: 
+
+```
+1234567890
+```
+
 ## First steps
 
 ## Clone repository
@@ -140,7 +160,7 @@ By executing the following commands
 php artisan serve
 ```
 
-And now open [http://127.0.0.1:8000/dashboard](http://127.0.0.1:8000/dashboard) and you can use the App.
+And now open <a href="http://127.0.0.1:8000/login" target="_blank">http://127.0.0.1:8000/login</a> and you can use the App.
 
 ## Technologies used
 
@@ -148,8 +168,9 @@ For this technical test, I decided to use Laravel, as it allowed me to optimize 
 
 For the visual design, I opted for Tailwindcss, which facilitates the creation of attractive and functional interfaces. I also used Lucide Icons to add some icons that enrich the user experience. Here are the resources I used:
 
-Laravel Documentation: [https://laravel.com/docs/11.x/installation](https://laravel.com/docs/11.x/installation) <br/>
-React Documentation: [https://es.react.dev/learn](https://es.react.dev/learn) <br/>
-Inertia Documentation: [https://inertiajs.com/](https://inertiajs.com/)  <br/>
-Tailwindcss Documentation: [https://tailwindcss.com/docs/installation](https://tailwindcss.com/docs/installation) <br/>
-Lucide Icons Documentation:[https://lucide.dev/guide/](https://lucide.dev/guide/)
+<a href="https://laravel.com/docs/11.x/installation" target="_blank">Laravel Documentation</a> <br/>
+<a href="https://es.react.dev/learn" target="_blank">React Documentation</a> <br/>
+<a href="https://inertiajs.com/" target="_blank">Inertia Documentation</a> <br/>
+<a href="https://tailwindcss.com/docs/installation" target="_blank">Tailwindcss Documentation</a> <br/>
+<a href="https://lucide.dev/guide/" target="_blank">Lucide Icons Documentation</a>
+
